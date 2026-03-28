@@ -2,6 +2,8 @@
 
 更新日: 2026-03-28
 
+> 注記: この文書は `TCMath` を execution substrate 寄りに解釈した初期草案です。`TCMath` を「全LMが共有する意味表現レイヤー」として再定義した最新版は [tcmath-interlingua-design.md](/Users/3t14/dev/codex/eklm/docs/investigate/tcmath-interlingua-design.md) を参照してください。
+
 ## 要約
 
 目的は、「数式を token 化できて、機械実行できて、Turing 完全な形で表現できる知識表現」を作ることです。
