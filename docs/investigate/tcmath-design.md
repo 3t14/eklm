@@ -254,8 +254,6 @@ Arrow[A B]
 (add i:2 i:3)
 ```
 
-KaTeX:
-
 $$
 2 + 3
 $$
@@ -265,8 +263,6 @@ $$
 ```lisp
 (quote (add var:x i:3))
 ```
-
-KaTeX:
 
 $$
 x + 3
@@ -309,8 +305,6 @@ $$
     (mul var:x var:x)))
 ```
 
-KaTeX:
-
 $$
 \mathrm{square}(x) = x^2
 $$
@@ -341,8 +335,6 @@ $$
       (add (mul i:2 var:x) i:1))))
 ```
 
-KaTeX:
-
 $$
 3x^2 + 2x + 1
 $$
@@ -358,8 +350,6 @@ $$
           (mul var:n
                (app sym:fact (sub var:n i:1)))))))
 ```
-
-KaTeX:
 
 $$
 \mathrm{fact}(n) =
@@ -380,8 +370,6 @@ $$
       (app sym:deriv ?b ?x))))
 ```
 
-KaTeX:
-
 $$
 \frac{d}{dx}(a + b) = \frac{da}{dx} + \frac{db}{dx}
 $$
@@ -395,8 +383,6 @@ $$
       (eq var:f (mul var:m var:a))
       (eq var:a (div var:f var:m)))))
 ```
-
-KaTeX:
 
 $$
 f = ma \Rightarrow a = \frac{f}{m}
@@ -414,8 +400,6 @@ $$
           var:s
           (app sym:step (app sym:delta var:s))))))
 ```
-
-KaTeX:
 
 $$
 \mathrm{run}(s) =
