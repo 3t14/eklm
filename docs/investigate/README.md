@@ -62,6 +62,9 @@
 - [語彙抽象化ポリシー](./vocabulary-abstraction-policy.md)
   自然言語、数式、正規表現に共通して、構造を固定語彙、内容依存要素を型付きスロットへ抽象化する方針。
 
+- [Lexical Grounding Architecture](./lexical-grounding-architecture.md)
+  スロット化だけでは失われる固有名詞や専門語の意味を、surface と binding で後から接地する設計。
+
 ## 割当・解析
 
 - [構造割当器アーキテクチャ](./structure-assigner-architecture.md)
@@ -70,6 +73,9 @@
 - [Structure Assignment Pipeline](./structure-assignment-pipeline.md)
   表層関係抽出、仮スロット化、抽象関係化、知識束縛、関係再更新までの時系列パイプライン。
 
+- [Soft Layer Learning and Post-Hoc Adaptation](./soft-layer-learning-and-post-hoc-adaptation.md)
+  Soft Layer を直接注釈せず、残差として学習し、事後学習で改善する方針。
+
 ## 表現形式の比較
 
 - [表現形式ごとのサイズ比較](./representation-size-comparison.md)
@@ -77,6 +83,11 @@
 
 - [Tree vs DAG vs Shared Reference](./tree-vs-dag-vs-shared-reference.md)
   再帰構造の表現力と、shared reference による情報量節約を比較したメモ。
+
+## 運用・権利
+
+- [Copyright-Aware and Compensable KB Architecture](./copyright-aware-compensable-kb-architecture.md)
+  source text と canonical knowledge を分離し、provenance と補償設計を可能にする KB 方針。
 
 ## 初期草案
 
