@@ -254,11 +254,23 @@ Arrow[A B]
 (add i:2 i:3)
 ```
 
+KaTeX:
+
+$$
+2 + 3
+$$
+
 は即値計算できる項ですが、
 
 ```lisp
 (quote (add var:x i:3))
 ```
+
+KaTeX:
+
+$$
+x + 3
+$$
 
 は式木データです。
 
@@ -297,6 +309,12 @@ Arrow[A B]
     (mul var:x var:x)))
 ```
 
+KaTeX:
+
+$$
+\mathrm{square}(x) = x^2
+$$
+
 ### 9.2 storage form
 
 保存時には binder を安定化させます。最初の版では `var:x` を残してよいですが、最終的には de Bruijn index に落とす方が安全です。
@@ -323,6 +341,12 @@ Arrow[A B]
       (add (mul i:2 var:x) i:1))))
 ```
 
+KaTeX:
+
+$$
+3x^2 + 2x + 1
+$$
+
 ### 10.2 階乗
 
 ```lisp
@@ -335,6 +359,16 @@ Arrow[A B]
                (app sym:fact (sub var:n i:1)))))))
 ```
 
+KaTeX:
+
+$$
+\mathrm{fact}(n) =
+\begin{cases}
+1 & (n = 0) \\
+n \cdot \mathrm{fact}(n-1) & (n > 0)
+\end{cases}
+$$
+
 ### 10.3 微分規則
 
 ```lisp
@@ -346,6 +380,12 @@ Arrow[A B]
       (app sym:deriv ?b ?x))))
 ```
 
+KaTeX:
+
+$$
+\frac{d}{dx}(a + b) = \frac{da}{dx} + \frac{db}{dx}
+$$
+
 ### 10.4 物理法則
 
 ```lisp
@@ -355,6 +395,12 @@ Arrow[A B]
       (eq var:f (mul var:m var:a))
       (eq var:a (div var:f var:m)))))
 ```
+
+KaTeX:
+
+$$
+f = ma \Rightarrow a = \frac{f}{m}
+$$
 
 ### 10.5 Turing 完全性の最小例
 
@@ -368,6 +414,16 @@ Arrow[A B]
           var:s
           (app sym:step (app sym:delta var:s))))))
 ```
+
+KaTeX:
+
+$$
+\mathrm{run}(s) =
+\begin{cases}
+s & \mathrm{halt?}(s) \\
+\mathrm{run}(\delta(s)) & \text{otherwise}
+\end{cases}
+$$
 
 ここで `State` と `delta` を適切に定義すれば、任意の register machine を表現できます。
 
