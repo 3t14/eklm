@@ -17,10 +17,28 @@
 - [知識と表現を分離する言語モデルの先行研究調査](./knowledge-expression-separation-survey.md)
   既存研究の系譜を、知識外部化、数式・論理・プログラム、正規表現・オートマトンの3系統を中心に整理した調査。
 
+- [類似研究の再調査](./refined-approach-related-work-survey.md)
+  現在の構想に寄せて、共通IR、semantic parsing、文法制約付き生成、モジュール合成を中心に再整理した調査。
+
+- [類似研究との差分表と勝ち筋](./related-work-diff-and-winning-path.md)
+  既存研究との差分と、この方式が勝ちやすい領域、勝ちにくい領域を一枚で整理したメモ。
+
 ## 全体構想
 
 - [設計原則](./design-principles.md)
   現時点での中心思想を短く整理した文書。表現部、知識部、導出部の分離を定義している。
+
+- [Core Novelty Claim](./core-novelty-claim.md)
+  この構想の中核的新規性を、既存研究との差分とともに一枚で圧縮した文書。
+
+- [Dual Representation Architecture](./dual-representation-architecture.md)
+  typed slot graph と潜在空間を併用する二層表現として、この方式を整理した文書。
+
+- [Lisp / Prolog / 提案方式の比較](./lisp-prolog-comparison.md)
+  Lisp や Prolog に見える点と、本方式がそれらと本質的に異なる点を整理した比較表。
+
+- [Meta-Attention Architecture](./meta-attention-architecture.md)
+  sentence、paragraph、section、document、corpus の上位ノードに対する階層 attention / routing の設計案。
 
 - [提案アーキテクチャの差分図](./proposed-architecture-diff.md)
   現在主流の Transformer ベース LLM と、この構想との差分を一枚図で比較したもの。
@@ -49,10 +67,16 @@
 - [構造割当器アーキテクチャ](./structure-assigner-architecture.md)
   入力を共通IRへ割り当てるための、deterministic parser + regex/FSA + 小型Transformer + validator のハイブリッド設計。
 
+- [Structure Assignment Pipeline](./structure-assignment-pipeline.md)
+  表層関係抽出、仮スロット化、抽象関係化、知識束縛、関係再更新までの時系列パイプライン。
+
 ## 表現形式の比較
 
 - [表現形式ごとのサイズ比較](./representation-size-comparison.md)
   同じ構造を Lisp 風、JSON AST、binary AST、slot/value table で保持したときの概算サイズ比較。
+
+- [Tree vs DAG vs Shared Reference](./tree-vs-dag-vs-shared-reference.md)
+  再帰構造の表現力と、shared reference による情報量節約を比較したメモ。
 
 ## 初期草案
 
